@@ -1,0 +1,201 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #979797;
+  }
+
+/* SCROLL CSS */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+/* Main Container */
+.container {
+    margin-top: 38px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1800px;
+  }
+}
+
+
+p {
+  margin: 0px 0 0px;
+}
+
+.bold {
+  font-weight: bold;
+}
+.red {
+  color: #ec0000;
+}
+  .panel-theme,
+  .panel-primary,
+  .panel-success,
+  .panel-info,
+  .panel-warning,
+  .panel-danger {
+    background-color: #FFFFFF;
+    border: none;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  .panel-theme > .panel-heading {
+    background-color: #FFFFFF;
+    border: none;
+  }
+  .panel-theme > .panel-heading .badge {
+    color: #FFFFFF;
+    background-color: #00000;
+  }
+  .panel-theme > .panel-heading .panel-title {
+    font-weight: bold;
+  }
+  .panel-theme > .panel-footer {
+    background-color: #FFFFFF;
+    border: none;
+    border-top: 1px solid #E0E0E0;
+  }
+  .panel-theme > .panel-footer + .panel-collapse > .panel-body {
+    border-bottom: none;
+  }
+  .panel-primary > .panel-heading {
+    background-color: #2196F3;
+    color: #fff;
+  }
+  .panel-primary > .panel-heading .badge {
+    color: #2196F3;
+    background-color: #fff;
+  }
+  .panel-success > .panel-heading {
+    background-color: #8BC34A;
+    color: #fff;
+  }
+  .panel-success > .panel-heading .badge {
+    color: #8BC34A;
+    background-color: #fff;
+  }
+  .panel-info > .panel-heading {
+    background-color: #00BCD4;
+    color: #fff;
+  }
+  .panel-info > .panel-heading .badge {
+    color: #00BCD4;
+    background-color: #fff;
+  }
+  .panel-warning > .panel-heading {
+    background-color: #FF9800;
+    color: #fff;
+  }
+  .panel-warning > .panel-heading .badge {
+    color: #FF9800;
+    background-color: #fff;
+  }
+  .panel-danger > .panel-heading {
+    background-color: #F44336;
+    color: #fff;
+  }
+  .panel-danger > .panel-heading .badge {
+    color: #F44336;
+    background-color: #fff;
+  }
+
+
+  .well {
+    margin-top: 14px;
+    min-height: 12px;
+    padding: 5px;
+    margin-bottom: 0px;
+    background-color: #f1f1f1;
+    border: 1px solid #d8d8d8;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+
+.toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20px; }
+.toggle.ios .toggle-handle { border-radius: 20px; }
+.toggle.android { border-radius: 0px;}
+.toggle.android .toggle-handle { border-radius: 0px; }
+
+.table {
+  font-size: 11px;
+}
+
+
+.settings {
+  height: 562px;
+}
+
+
+
+
+.img-thumbnail {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: 89px;
+}
+
+.die-current {
+  background-color: #ffb51e;
+}
+
+.fixed-panel {
+  min-height: 10;
+  height: 563px;
+  overflow-y: scroll;
+}
+
+.tables-row {
+  min-height: 10px;
+  height: 563px; 
+  overflow-y:scroll;
+}

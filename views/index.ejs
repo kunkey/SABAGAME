@@ -1,0 +1,242 @@
+<html>
+    <head>
+        <title>Panel</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="http://hktconsultant.com/wp-content/uploads/2018/06/web-icon-1.png" type="image/gif" sizes="16x16">
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="custom.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="cute-alert-master/style.css" />
+        <script src="cute-alert-master/cute-alert.js"></script>
+        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>  
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <div class="card-body">
+                        <!--- SETTING AUTHEN AND OPTIONS --->       
+                        <div class="col-md-3 col-xs-12 col-lg-3 col-sm-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">TOKEN LOGIN SABAGAME</div>
+                                <div class="panel-body settings">
+                                    
+                                    <input type="text" id="token" class="form-control" placeholder="Token Sabagame">
+                                    <div id="user_info" class="well">...</div>
+
+                                    <table class="table table-bordered" style="margin-top: 20px;">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Thông Số</th>
+                                            <th scope="col">Giá Trị</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Âm thanh</th>
+                                                <td>
+                                                    <input type="checkbox" checked id="audio" data-style="android" data-onstyle="info">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Thống kê BET</th>
+                                                <td>
+                                                    <input type="checkbox" checked id="thong_ke_bet" data-style="android" data-onstyle="info">
+                                                </td>
+                                            </tr>
+                                          <tr>
+                                            <th>Product Mode</th>
+                                            <td>
+                                                <input type="checkbox" id="prod_mode" data-style="android" data-onstyle="info">
+                                                (Chạy tiền thì bật)
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <th>Bet Choice</th>
+                                            <td>
+                                                <select class="form-control" id="bet_choice">
+                                                    <option value="even">CHẴN</option>
+                                                    <option value="odd">LẺ</option>
+                                                  </select>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <th>Bet Start Money</th>
+                                            <td>
+                                                <input type="number" min="1" max="2000" id="bet_start" class="form-control" value="1">
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <th>Bet Loop</th>
+                                            <td>
+                                                <input type="number" min="1" id="bet_loop" class="form-control" value="3">
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <th>Bet Multiply</th>
+                                            <td>
+                                                <input type="number" min="1" id="bet_multiply" class="form-control" value="2">
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <div class="pull-right">
+                                        <button id="stop" class="btn btn-danger btn-sm"><i class="fa fa-pause" aria-hidden="true"></i> Stop BOT</button>
+                                        <button id="excute" class="btn btn-success btn-sm"><i class="fa fa-play" aria-hidden="true"></i> Run BOT</button>                                          
+                                      </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--- END SETTING AUTHEN AND OPTIONS ---> 
+    
+                        <!--- RESULTS ---> 
+                        <div class="col-md-3 col-xs-12 col-lg-3 col-sm-12">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">GAME ANALYTICS</div>
+                                <div class="panel-body">
+                                    <!---LEFT PANEL--->
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                                        <p class="red bold">KẾT QUẢ</p>
+                                        <img id="die-chan" src="/images/chan.png"  class="img-thumbnail">
+                                        <img id="die-le" src="/images/le.png" class="img-thumbnail">
+
+                                        <table class="table table-bordered" style="margin-top: 20px;">
+                                            <tbody>
+                                              <tr>
+                                                <th>PHIÊN ID</th>
+                                                <td>
+                                                    <p id="round_id" class="bold">Đang chờ...</p>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>Bet đang đặt</th>
+                                                <td>
+                                                    <p id="bet_choicing">...</p>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>Tiền đang BET</th>
+                                                <td>
+                                                    <p id="bet_money">...</p>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>Kết Quả BET</th>
+                                                <td>
+                                                    <p id="result_bet">...</p>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>Số lần đang thua</th>
+                                                <td>
+                                                    <p id="bet_false">...</p>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                              <tr>
+                                                <th>Tiền ban đầu</th>
+                                                <td>
+                                                    <p id="curent_money">...</p>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>Tiền hiện tại</th>
+                                                <td>
+                                                    <p id="now_money">...</p>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>Tổng Chi</th>
+                                                <td>
+                                                    <p id="total_chi">0</p>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>Tổng thu</th>
+                                                <td>
+                                                    <p id="total_thu">0</p>
+                                                </td>
+                                              </tr>
+                                             
+                                              <tr>
+                                                <th>Tổng số lần thắng</th>
+                                                <td>
+                                                    <p id="total_thang">0</p>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <th>Tổng số lần thua</th>
+                                                <td>
+                                                    <p id="total_thua">0</p>
+                                                </td>
+                                                <tr>
+                                                  <th>Tổng Chẵn/Lẻ</th>
+                                                  <td>
+                                                      <o id="total_chan">0</o>/<o id="total_le">0</o>
+                                                  </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>         
+                                </div>
+                            </div>
+                        </div>       
+                        <!--- END RESULTS ---> 
+
+                        <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12">
+                          <!---RIGHT PANEL--->
+                          <div class="panel panel-primary">
+                              <div class="panel-heading text-center">LỊCH SỬ BET</div>
+                              <div class="panel-body fixed-panel">
+                                <div class="table-responsive">
+                                  <table class="table" style="font-size: 13px;">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col" class="text-center">ID PHIÊN</th>
+                                        <th scope="col" class="text-center">CHẴN</th>
+                                        <th scope="col" class="text-center">LẺ</th>
+                                        <th scope="col" class="text-center">KẾT QUẢ</th>
+                                        <th scope="col" class="text-center">NHẬN ĐƯỢC</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id="lichsu"></tbody>
+                                  </table>
+                                </div>
+                              </div>
+                          </div>                    
+                        </div>
+
+
+                        <div class="col-md-2 col-lg-2 col-xs-12 col-sm-12">
+                          <!---RIGHT PANEL--->
+                          <div class="panel panel-primary">
+                              <div class="panel-heading text-center">GAME LOGS</div>
+                              <div class="panel-body fixed-panel" id="logs" style="font-size: 10px;"></div>
+                          </div>                    
+                        </div>
+
+    
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    <script>
+      var port = <%= port %>;
+    </script>
+    <script src="/main.js"></script>
+    </body>
+</html>
